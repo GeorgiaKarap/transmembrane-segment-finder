@@ -20,6 +20,8 @@ It uses a sliding window of amino acids to perform the check.
 	- seq_2.dat
 	- seq_3.dat
 - segment_prog.c
+- data
+	- hydrophobicity.txt
 - LICENSE
 - .gitignore
 
@@ -29,6 +31,7 @@ It uses a sliding window of amino acids to perform the check.
 
 - Reads a protein sequence from the user.
 - Uses a window of 20 amino acids to identify potential segments.
+- Μatches amino acids with their degree of hydrophobicity, based on hydrophobicity.txt file
 - If more than 5 amino acids in a window are below the threshold (0.5), the window is ignored.
 - Found segments are displayed along with their positions in the sequence.
 
@@ -93,6 +96,7 @@ seq_1.dat, seq_2.dat, seq_3.dat files and the segment_prog must be into the same
 
 - A window is considered a segment only if at most 5 amino acids are below the hydrophobicity threshold.
 - The program checks for invalid amino acids and stops with an error message if found.
+- The degree of hydrophobicity of each amino acid is based on the hydrophobicity.txt file, inside the data folder.
 - You can adjust the parameters at the top of the code:
 	- window_size (size of the sliding window)
 	- hydro_threshold (hydrophobicity cutoff)
